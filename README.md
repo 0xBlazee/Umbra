@@ -109,8 +109,3 @@ Once an authorized connection registers with the control server, manage endpoint
 * **`info`** — Collect machine telemetry properties and operating system metrics natively without spawning wrappers.
 * **`exec <command>`** — Instruct the agent to unpack arguments, clear processing buffers, and pipe task strings to an anonymous background process.
 * **`exit`** — Safely close open socket pipelines and drop active memory loops to end tracking cleanly.
-
----
-
-## ⚖️ Ethical Application & Liability Disclaimer
-The Umbra framework is developed for professional penetration testing, authorized red-team engagements, and educational research purposes. Target systems must be entirely owned or governed by explicit, signed authorization documentation prior to executing code deployments. Running these tools on unauthorized public networks is strictly forbidden.

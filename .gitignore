@@ -1,0 +1,31 @@
+# === Compiled Binaries & Objects ===
+*.exe
+*.dll
+*.so
+*.o
+*.obj
+*.pdb
+*.out
+
+# === Acheron Build Folders ===
+build/
+bin/
+x64/
+x86/
+.vs/
+out/
+
+# === Python Tracking Logs & Cache ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# === Charon PHP Local Logs & Dynamic Queues ===
+*.log
+command_queue.txt
+telemetry.log

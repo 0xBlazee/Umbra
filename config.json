@@ -1,0 +1,10 @@
+{
+  "network": {
+    "listener_host": "0.0.0.0",
+    "port": 4444
+  },
+  "security": {
+    "session_token_id": 994821,
+    "user_agent_signature": "CharonAgent/1.0"
+  }
+}

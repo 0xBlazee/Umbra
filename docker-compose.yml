@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  charon-listener:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4444:4444"
+    restart: always
+
+  charon-web-staging:
+    image: php:8.1-apache
+    ports:
+      - "80:80"
+    volumes:
+      - ./delivery.php:/var/www/html/index.php
+      - ./config.json:/var/www/html/config.json
+    restart: always

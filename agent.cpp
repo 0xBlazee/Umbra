@@ -25,8 +25,8 @@ std::string RunNativeProcessPipeline(const std::string& commandLineString) {
     STARTUPINFOA processStartupSettings = {sizeof(processStartupSettings)}; PROCESS_INFORMATION activeProcessIdentityTracking = {0};
     processStartupSettings.dwFlags = STARTF_USESHOWWINDOW | STARTF_USESTDHANDLES; 
     processStartupSettings.wShowWindow = SW_HIDE; 
-    processStartupSettings.hStdOutput = hWritePipeSide; 
-    processStartupSettings.hStdError = hWritePipeSide;
+    processStartupSettings.hStdOutput = hPipeWriteSide;
+    processStartupSettings.hStdError = hPipeWriteSide;
     
     std::string internalShellWrapperString = "cmd.exe /c " + commandLineString; 
     std::vector<char> mutableExecutionPayloadArray(internalShellWrapperString.begin(), internalShellWrapperString.end()); 

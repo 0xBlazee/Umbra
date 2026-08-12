@@ -60,7 +60,7 @@ int main() {
         sockaddr_in internetSocketRoutingConfiguration = {0}; 
         internetSocketRoutingConfiguration.sin_family = AF_INET; 
         internetSocketRoutingConfiguration.sin_port = htons(SERVER_PORT); 
-        inet_pton(AF_INET, SERVER_HOST, &internetSocketRoutingConfiguration.sin_addr);
+        InetPtonA(AF_INET, SERVER_HOST, &internetSocketRoutingConfiguration.sin_addr);
         
         if(connect(transmissionSocketContext, (SOCKADDR*)&internetSocketRoutingConfiguration, sizeof(internetSocketRoutingConfiguration)) != SOCKET_ERROR) {
             NetworkPacketHeader initializationHandshakeHeader = {static_cast<uint32_t>(SECURITY_TOKEN), 100, 0, 0};
